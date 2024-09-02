@@ -1,17 +1,41 @@
-//
-//  ThereApp.swift
-//  There
-//
-//  Created by Dena Sohrabi on 8/30/24.
-//
-
 import SwiftUI
 
 @main
-struct ThereApp: App {
+struct TimeZoneTrackerApp: App {
+    @StateObject private var viewModel = TimeZoneViewModel()
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra("Time Zones", systemImage: "clock") {
+            if UserDefaults.standard.bool(forKey: "hasCompletedInitialSetup") {
+                ContentView(viewModel: viewModel)
+                    .background {
+                        Color(.quinarySystemFill)
+                            .ignoresSafeArea()
+                    }
+            } else {
+                InitialSetupView(viewModel: viewModel)
+            }
         }
+        .windowStyle(.plain)
+        .menuBarExtraStyle(.window)
+        .windowIdealSize(.fitToContent)
+
+        Window("Add Person", id: "add-person") {
+            AddTimeZoneView(viewModel: viewModel)
+        }
+        .windowStyle(.hiddenTitleBar)
+        .windowIdealSize(.fitToContent)
+        
+        Window("Add Place", id: "add-place") {
+            AddPlaceView(viewModel: viewModel)
+        }
+        .windowStyle(.hiddenTitleBar)
+        .windowIdealSize(.fitToContent)
+
+        Window("Setup", id: "setup") {
+            InitialSetupView(viewModel: viewModel)
+        }
+        .windowStyle(.hiddenTitleBar)
+        .windowIdealSize(.fitToContent)
     }
 }

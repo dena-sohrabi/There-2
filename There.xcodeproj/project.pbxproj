@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C3342B552C830A2000875DF1 /* TimeZoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3342B2B2C8307C300875DF1 /* TimeZoneManager.swift */; };
+		C3342B572C830A2E00875DF1 /* BodegaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3342B2C2C8307D100875DF1 /* BodegaStore.swift */; };
+		C3342B5A2C830A4D00875DF1 /* TimeZoneEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3342B2D2C8307DC00875DF1 /* TimeZoneEntry.swift */; };
+		C3342B5B2C830A5500875DF1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3342B2E2C8307FA00875DF1 /* Constants.swift */; };
+		C3342B5F2C830A7800875DF1 /* Bodega in Frameworks */ = {isa = PBXBuildFile; productRef = C3342B5E2C830A7800875DF1 /* Bodega */; };
+		C3342B642C831BA600875DF1 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3342B632C831BA500875DF1 /* Place.swift */; };
+		C3342B662C831D0D00875DF1 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3342B652C831D0A00875DF1 /* UserInfo.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C33CF7192C822F1E00692165 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,7 +33,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C3342B532C83085D00875DF1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C3342B2B2C8307C300875DF1 /* TimeZoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneManager.swift; sourceTree = "<group>"; };
+		C3342B2C2C8307D100875DF1 /* BodegaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodegaStore.swift; sourceTree = "<group>"; };
+		C3342B2D2C8307DC00875DF1 /* TimeZoneEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneEntry.swift; sourceTree = "<group>"; };
+		C3342B2E2C8307FA00875DF1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C3342B402C83085B00875DF1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C3342B422C83085B00875DF1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C3342B632C831BA500875DF1 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		C3342B652C831D0A00875DF1 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		C33CF7072C822F1C00692165 /* There.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = There.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33CF7182C822F1E00692165 /* ThereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33CF7222C822F1E00692165 /* ThereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3342B5F2C830A7800875DF1 /* Bodega in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +104,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3342B282C8307B200875DF1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C3342B2E2C8307FA00875DF1 /* Constants.swift */,
+				C3342B2A2C8307BD00875DF1 /* Managers */,
+				C3342B292C8307B700875DF1 /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C3342B292C8307B700875DF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3342B2D2C8307DC00875DF1 /* TimeZoneEntry.swift */,
+				C3342B632C831BA500875DF1 /* Place.swift */,
+				C3342B652C831D0A00875DF1 /* UserInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C3342B2A2C8307BD00875DF1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C3342B2C2C8307D100875DF1 /* BodegaStore.swift */,
+				C3342B2B2C8307C300875DF1 /* TimeZoneManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C3342B3F2C83085B00875DF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3342B402C83085B00875DF1 /* WidgetKit.framework */,
+				C3342B422C83085B00875DF1 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C33CF6FE2C822F1C00692165 = {
 			isa = PBXGroup;
 			children = (
+				C3342B282C8307B200875DF1 /* Shared */,
 				C33CF7092C822F1C00692165 /* There */,
 				C33CF71B2C822F1E00692165 /* ThereTests */,
 				C33CF7252C822F1E00692165 /* ThereUITests */,
+				C3342B3F2C83085B00875DF1 /* Frameworks */,
 				C33CF7082C822F1C00692165 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +174,7 @@
 				C33CF7032C822F1C00692165 /* Sources */,
 				C33CF7042C822F1C00692165 /* Frameworks */,
 				C33CF7052C822F1C00692165 /* Resources */,
+				C3342B532C83085D00875DF1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -112,6 +185,7 @@
 			);
 			name = There;
 			packageProductDependencies = (
+				C3342B5E2C830A7800875DF1 /* Bodega */,
 			);
 			productName = There;
 			productReference = C33CF7072C822F1C00692165 /* There.app */;
@@ -195,6 +269,9 @@
 			);
 			mainGroup = C33CF6FE2C822F1C00692165;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C3342B5D2C830A7800875DF1 /* XCLocalSwiftPackageReference "../../Downloads/Bodega-main" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C33CF7082C822F1C00692165 /* Products */;
 			projectDirPath = "";
@@ -236,6 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3342B552C830A2000875DF1 /* TimeZoneManager.swift in Sources */,
+				C3342B572C830A2E00875DF1 /* BodegaStore.swift in Sources */,
+				C3342B5A2C830A4D00875DF1 /* TimeZoneEntry.swift in Sources */,
+				C3342B662C831D0D00875DF1 /* UserInfo.swift in Sources */,
+				C3342B5B2C830A5500875DF1 /* Constants.swift in Sources */,
+				C3342B642C831BA600875DF1 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +479,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires location services to find time zones for selected cities.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -435,6 +519,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires location services to find time zones for selected cities.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -591,6 +676,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		C3342B5D2C830A7800875DF1 /* XCLocalSwiftPackageReference "../../Downloads/Bodega-main" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../Downloads/Bodega-main";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3342B5E2C830A7800875DF1 /* Bodega */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Bodega;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C33CF6FF2C822F1C00692165 /* Project object */;
 }
